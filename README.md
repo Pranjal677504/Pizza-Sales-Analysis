@@ -43,8 +43,20 @@ The relational database instance maps transaction histories across four primary 
 
 ---
 
+## Repository Files
+
+| File | Contents |
+|---|---|
+| [orders.csv](orders.csv) | Order IDs, dates, and times |
+| [order_details.csv](order_details.csv) | Ordered pizzas and quantities for each order |
+| [pizzas.csv](pizzas.csv) | Pizza sizes and prices |
+| [pizza_types.csv](pizza_types.csv) | Pizza names, categories, and ingredients |
+
 ## Implementation & Reproduction Workflow
-1. Initialize a clean relational database instance named pizza_hut within your client interface (e.g., MySQL Workbench).
-2. Execute structural table definition configurations to match your required parameters.
-3. Run the integrated data import wizards targeting the source .csv datasets.
-4. Execute individual analytics blocks directly from the dedicated scripts directory to run analytical reports.
+
+This repository currently includes the four source CSV files and this README. Table-creation and analysis SQL scripts are not included.
+
+1. Create a database named `pizza_hut` in your SQL client (for example, MySQL Workbench).
+2. Create the `orders`, `order_details`, `pizzas`, and `pizza_types` tables using the CSV headers and the dataset architecture above. Choose appropriate data types and primary/foreign keys.
+3. Import each linked CSV file into its matching table, treating the first row as column headers.
+4. Write and run SQL queries for the analytical questions listed above. Save your schema and queries locally so you can repeat the analysis.
